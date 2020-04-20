@@ -1,0 +1,6 @@
+### Dynamic Power Supply Module
+[batteryblocks]
+interval=30
+markup=pango
+align=center
+min_width='  [■■■■■]'
