@@ -8,7 +8,7 @@ batteryInfo="$(acpi -b)"
 ## [3-6]: temporarily simulate charge level (for custom colors testing).
 case ${BLOCK_BUTTON} in
 [1-2]) notify-send "${adapterInfo}"$'\n'"${batteryInfo}" ;;
-[3-6]) Charge=$(dmenu -l 10 < <(for i in {0..100} ; do echo ${i}; done))
+[3-6]) adapterInfo=$(dmenu -l 2 < <(for i in 'Power Adapter: on-line' 'Power Adapter: off-line' ; do echo ${i}; done)) && Charge=$(dmenu -l 10 < <(for i in {0..100} ; do echo ${i}; done))
 esac
 
 ### Defaults
