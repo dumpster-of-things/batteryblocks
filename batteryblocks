@@ -8,7 +8,7 @@ batteryInfo="$(acpi -b)"
 
 [[ "${adapterInfo##*\:\ }" == "on-line" ]] && adapterState=1 || adapterState=0
 batteryState="${batteryInfo##*\:\ }" && batteryState="${batteryState%%\,*}"
-Charge="${1:-${batteryInfo##*\,\ }}" && Charge="${Charge/\%/}"
+Charge="${batteryInfo#*\,\ }" && Charge="${Charge%%\%*}"
 
 Blox[0]="□"
 Blox[1]="■"
