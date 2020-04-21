@@ -1,4 +1,5 @@
-# batteryblocks ![](exhibit.gif)
+# batteryblocks
+![](exhibit.gif)
 a dynamic battery level indicator for i3blocks
 
 All ye who stumble accross this repo be warned that;
