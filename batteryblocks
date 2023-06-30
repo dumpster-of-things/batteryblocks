@@ -78,7 +78,8 @@ fi
 
 ## set statLabel and Palette[0] according to the current state of the power adapter (plugged/unplugged).
 if [[ ${adapterState} == 1 ]]; then
-	statLabel=" " && Palette[0]='#663399'
+	#statLabel=" " && Palette[0]='#663399' #symbool seems to have changed...
+	statLabel="∞ " && Palette[0]='#663399'
 else
 	statLabel="⚡ " && Palette[0]='#393633'
 fi
